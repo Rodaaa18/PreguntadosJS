@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background: radial-gradient(#333, black); 
+    font-family: 'Press Start 2P', cursive;
+}
+
+.press__start{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(#333, black); 
+}
+.press__start a{
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    color: greenyellow;
+    animation: titilar 1s ease infinite;
+}
+.welcome{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.welcome__container{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-family: 'Press Start 2P', cursive;
+}
+.welcome__btn__container{
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.welcome__btn{
+    border: 2px dashed rgb(117, 192, 3);
+    padding: 2%;
+    text-decoration: none;
+    color: rgb(117, 192, 3);
+    animation: titilar 1s ease infinite;
+}
+.none {
+    display:none;
+}
+.maquina-escribir3 {
+    font-family: 'Press Start 2P', cursive;
+    display: inline;
+    color: rgb(117, 192, 3);
+    font-size: 2rem; 
+    font-size: 180%;
+    text-align: center;
+  }
+/* --------------------------------------------------------FirstPAge-------------------------------- */
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    color: rgb(117, 192, 3);
+     font-family: 'Press Start 2P', cursive;
+}
+.form__name{
+    margin: 2%;
+    background: transparent;
+    border: 1px solid rgb(117, 192, 3);
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(117, 192, 3);
+}
+.decision{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 55%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 55%;
+    
+}
+.decision__btn{
+    font-size: 2rem;
+    margin: 5%;
+    padding: 9%;
+    background: transparent;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(117, 192, 3);
+    border: 1px solid rgb(117, 192, 3);
+    border-radius: 5%;
+    animation: titilar 1s ease infinite;
+    cursor: pointer;
+}
+#si{
+    border:2px solid rgb(117, 192, 3) ;
+}
+@keyframes titilar{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.04);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

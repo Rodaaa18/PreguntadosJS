@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="app__container">
+        <div class="game">
+            <div class="game__card">
+                <div class="game__card__header">
+                    <img src="./assets/preguntados.png" alt="" class="game__card__img">
+                    <h1 class="game__card__title">TriaviaTlon</h1>
+                    <img src="./assets/preguntados.png" alt="" class="game__card__img">
+                </div>
+                <div id="crearPregunta">
+                    <button class="none" id="crearPreg">Agregar Pregunta</button>
+                </div>
+                <div class="game__card__body" id="game__card__body">
+                    <a href="" class="start" id="start"> START </a>
+                    <h3 id="hora"></h3>
+                    <h3 class="none" id="contador"></h3>
+                    <!-- ---------------------------------------Juego ------------------------------- -->
+                    <div class="" id="contenedorJuego">
+                    </div>
+                    <!-- --------------------------------------Perdiste ----------------------------- -->
+                    <div class="none" id="perdiste">
+                        <h2>¡Perdiste!</h2>
+                        <img src="https://www.preguntados.com/static/media/IMG@2x.9ead8645d8ec3b4b7a9a.png" alt="" class="endImage">
+                        <div class="game__card__end__text">
+                           <h3> Pero no te preocupes, ¡Puedes volver a intentarlo!</h3> 
+                           <button class="vovlerAJugar" id="volverAJugar">Volver a Jugar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <script type="module" src="./main.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

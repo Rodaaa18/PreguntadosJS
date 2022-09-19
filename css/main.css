@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    
+    background: radial-gradient(circle, rgba(212,214,99,1) 0%, rgba(202,128,212,1) 100%);
+}
+
+.app__container{
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 97vh;
+    padding: 1%;
+}
+.game__card{
+    width: 60%;
+    height: 95%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: linear-gradient(rgba(221, 214, 214, 0.7), rgba(235, 224, 224, 0.7));
+    min-width: 288px;
+}
+.game__card__header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 20%;
+}
+.game__card__img{
+    width: 20%;
+}
+.game__card__title{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+}
+.game__card__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(rgba(165, 160, 160, 0.7), rgba(170, 162, 162, 0.7));
+    border-radius: 10px;
+}
+.game__card__preguntas{
+    font-family: 'Luckiest Guy', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.start{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color:black;
+    animation: titilar 1s ease infinite;
+    cursor: pointer;
+}
+.start:hover{
+    color: #b36a05;
+}
+.startAfter{
+    display: none;
+    position: absolute;
+}
+.none{
+    display: none;
+    position: absolute;
+}
+.preguntaBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.game__card__end{
+    font-family: 'Luckiest Guy', cursive;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgba(224, 14, 14, 0.7), rgba(231, 7, 7, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 10px;
+    border: 1px solid black;
+    
+}
+.game__card__end h2{
+    font-size: 2.5rem;
+}
+.game__card__end__text{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    padding-left: 10%;
+}
+.endImage{
+    width: 50%;
+}
+.vovlerAJugar{
+    font-family: 'Luckiest Guy', cursive;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 2%;
+    background-color: rgba(235, 224, 224, 0.7);
+    margin-top: 2%;
+    animation: titilar 2s ease infinite;
+    cursor: pointer;
+}
+.pregunta{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    margin-left: 1%;
+}
+.pregunta2{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.1rem;
+    margin: 2%;
+    margin-left: 4%;
+}
+.pregunta3{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.2rem;
+    margin-left: 1%;
+}
+.btn_enviar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+.respuesta{
+    font-size: 1rem;
+    border: 2px solid black;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(170, 138, 185);
+    min-width: 100%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.respuesta:hover{
+    opacity: 0.9;
+}
+.info{
+    border-radius: 10px;
+    font-family: 'Luckiest Guy', cursive;
+    width: 250px;
+}
+#crearPregunta{
+    position: absolute;
+    width: 28%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn__agregar{
+    font-size: 1rem;
+    border: 2px solid black;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(170, 138, 185);
+    min-width: 50%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+@keyframes titilar{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.04);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+

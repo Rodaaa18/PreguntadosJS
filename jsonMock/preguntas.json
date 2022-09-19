@@ -1,0 +1,102 @@
+[
+    {
+        "id" : 1,
+        "tipo" : "Programacion",
+        "pregunta" : "¿Que lenguaje de programación es el mas solicitado en Desarrollo Web?",
+        "respuesta1" : "C-Sharp",
+        "respuesta2" : "Python",
+        "respuesta3" : "Java",
+        "respuesta4" : "JavaScript",
+        "respuestaCorrecta" : "JavaScript"
+    },
+    {
+        "id" : 2,
+        "tipo" : "Ciencia",
+        "pregunta" : "¿Que es un Psicodiagnóstico?", 
+        "respuesta1" : "Un proceso para conocer la personalidad",
+        "respuesta2" : "Un tratamiento psicológico",
+        "respuesta3" : "Un tratamiento psiquiátrico",
+        "respuesta4" : "Un proceso de escucha activa",
+        "respuestaCorrecta" : "Un proceso para conocer la personalidad"
+    },
+    {
+        "id" : 3,
+        "tipo" : "Entretenimiento",
+        "pregunta" : "¿Cómo es el nombre completo del Artista Urbano \"Ysy A\"?",
+        "respuesta1" : "Alejo Emanuel Acosta",
+        "respuesta2" : "Alejo Emanuel Costa",
+        "respuesta3" : "Alejo Nahuel Acosta",
+        "respuesta4" : "Alejo Nahuel Costa" ,
+        "respuestaCorrecta" : "Alejo Nahuel Costa"
+    },
+    {
+        "id" : 4,
+        "tipo" : "Geografía",
+        "pregunta" : "¿En que País se encuentra Formo?",
+        "respuesta1" : "Argentina",
+        "respuesta2" : "Perú",
+        "respuesta3" : "Bolivia",
+        "respuesta4" : "No existe",
+        "respuestaCorrecta" : "No existe"
+    },
+    {
+        "id" : 5,
+        "tipo" : "Entretenimiento",
+        "pregunta" : "¿Cómo es el Apellido del famoso cantante Chayanne?",
+        "respuesta1" : "Arce",
+        "respuesta2" : "Figueroa",
+        "respuesta3" : "Maldonado",
+        "respuesta4" : "Pérez",
+        "respuestaCorrecta" : "Figueroa"
+    },
+    {
+        "id" : 6,
+        "tipo" : "Ciencia",
+        "pregunta" : "¿La Zanahoria y el Tomate tienen Vitamina...?",
+        "respuesta1" : "Ambas son Correctas",
+        "respuesta2" : "A",
+        "respuesta3" : "K",
+        "respuesta4" : "Ninguna es Correcta",
+        "respuestaCorrecta" : "Ambas son Correctas"
+    },
+    {
+        "id" : 7,
+        "tipo" : "Programación",
+        "pregunta" : "¿Que tipo de lenguaje de Programación es HTML?",
+        "respuesta1" : "Bajo Nivel",
+        "respuesta2" : "Alto Nivel",
+        "respuesta3" : "No es un lenguaje de Programación",
+        "respuesta4" : "Es un lenguaje de Estilos",
+        "respuestaCorrecta" : "No es un lenguaje de Programación"
+    },
+    {
+        "id" : 8,
+        "tipo" : "Ciencia",
+        "pregunta" : "¿Cuáles son las 3 Macromoléculas de los seres vivos además del ácido nucleico?",
+        "respuesta1" : "Carbohidratos, Lípidos, Proteínas",
+        "respuesta2" : "Carbohidratos, Lípidos, Oxígeno",
+        "respuesta3" : "Carbohidratos, Proteínas, Nitrógeno",
+        "respuesta4" : "Carbohidratos, Nitrógeno, Oxígeno",
+        "respuestaCorrecta" : "Carbohidratos, Lípidos, Proteínas"
+    },
+    {
+        "id" : 9,
+        "tipo" : "Arte",
+        "pregunta" : "¿Quíen es el Autor de \"Instant Karma\"?",
+        "respuesta1" : "John Lennon",
+        "respuesta2" : "Michael Jackson",
+        "respuesta3" : "The Beatles",
+        "respuesta4" : "50 Cent",
+        "respuestaCorrecta" : "Michael Jackson"
+    },
+    {
+        "id" : 10,
+        "tipo" : "Arte",
+        "pregunta" : "¿Que Procer Argentino libero a gran parte de América de los Realistas?",
+        "respuesta1" : "José de San martín",
+        "respuesta2" : "Manuel Belgrano",
+        "respuesta3" : "Maradona",
+        "respuesta4" : "Juan Manuel de Rosas",
+        "respuestaCorrecta" : "Manuel Belgrano"
+    }
+]
