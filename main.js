@@ -1,15 +1,17 @@
-import json from "./jsonMock/preguntas.json" assert { type: "json" };
+import jsonFile from "./jsonMock/preguntas.json" assert { type: "json" };
 import {fetchHora}  from "./src/fetch/fetchingHora.js";
 import renderPreg from "./src/js/renderPregunta.js";
-import getRandomInt from "./src/js/helpers.js";
+import getRandomInt, {setListPreguntasLocal, getListPreguntasLocal} from "./src/js/helpers.js";
 import {actualizarContador} from "./src/js/helpers.js";
 import volverAJugar from "./src/js/volverAJugar.js";
 import {agregarPregunta} from "./src/js/agregarPregunta.js";
 
+setListPreguntasLocal(jsonFile);
+const listPreguntas = getListPreguntasLocal();
+
 let start = document.querySelector("#start");
 let preguntas = [];
-let indexPregunta = getRandomInt(json.length);
-
+let indexPregunta = getRandomInt(listPreguntas.length);
 
 
 const llenarHora =()=>{
@@ -27,9 +29,9 @@ const Jugar = (e) => {
     btnAgregar.classList.remove("none");
     btnAgregar.classList.add("btn__agregar");
     contador.classList.remove("none");
-    actualizarContador(preguntas, json)
+    actualizarContador(preguntas)
 
-    preguntas.length == 0 ? renderPreg(indexPregunta, json, preguntas) : Toastify({
+    preguntas.length == 0 ? renderPreg(indexPregunta, preguntas) : Toastify({
       text: "No hay preguntas cargadas",
       duration: 1000,
       className: "info",

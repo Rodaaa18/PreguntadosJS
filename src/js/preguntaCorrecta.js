@@ -2,14 +2,16 @@ import renderPreg from "./renderPregunta.js";
 import { Perdiste } from "./perdiste.js";
 import { limpiarHTML } from "./limpiarHtml.js";
 import getRandomInt from "./helpers.js";
+import { getListPreguntasLocal } from "./helpers.js";
 
-const preguntaCorrecta = (value, json, preguntas) => (e) => {
+const preguntaCorrecta = (value, preguntas) => (e) => {
     e.preventDefault();
+    const listPreguntas = getListPreguntasLocal()
   
     if (e.target.innerText.toLowerCase() == value.toLowerCase()) {
       e.target.style.background = "green";
       let indexNewPregunta = -1;
-      if (preguntas.length === json.length) {
+      if (preguntas.length === listPreguntas.length) {
         Toastify({
           text: "GANASTE",
           duration: 10000,
@@ -23,11 +25,11 @@ const preguntaCorrecta = (value, json, preguntas) => (e) => {
         }).showToast();
       } else {
         do {
-          indexNewPregunta = getRandomInt(json.length);
+          indexNewPregunta = getRandomInt(listPreguntas.length);
         } while (preguntas.includes(indexNewPregunta));
         {
           limpiarHTML();
-          renderPreg(indexNewPregunta, json, preguntas);
+          renderPreg(indexNewPregunta, preguntas);
           Toastify({
             text: "RESPUESTA CORRECTA",
             duration: 1000,

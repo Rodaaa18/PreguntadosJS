@@ -1,8 +1,7 @@
-import { limpiarHTML } from "./limpiarHtml.js";
 import volverAJugar from "./volverAJugar.js";
-import json from "../../jsonMock/preguntas.json" assert { type: "json" };
+import {getListPreguntasLocal, setListPreguntasLocal} from "./helpers.js";
 
-const agregarPregunta =(preguntas)=>{
+const agregarPregunta = (preguntas) =>{
     let contenedor = document.querySelector("#contenedorJuego");
     let preguntaBody = document.querySelector("#preguntaBody");
     let respuesta = document.querySelector("#preguntasBody");
@@ -10,9 +9,8 @@ const agregarPregunta =(preguntas)=>{
     const contador = document.getElementById("contador");
     const crearPreg =  document.querySelector("#crearPreg"); 
     contador.classList.add("none");
-    if(hora){
-        hora.classList.add("none");
-    }
+
+    hora && hora.classList.add("none");
     
     preguntaBody.remove();
     respuesta.remove();
@@ -44,7 +42,9 @@ const agregarPregunta =(preguntas)=>{
     contenedor.appendChild(respuestas);
     crearPreg.classList.add("none");
     const botonEnviar = document.querySelector("#btn__agregar");
-    const guardarYEnviar =()=>{
+    const guardarYEnviar = () =>{
+
+        const listPreguntas = getListPreguntasLocal();
         
         const preguntaNueva = document.querySelector("#preguntaNueva").value;
 
@@ -52,11 +52,11 @@ const agregarPregunta =(preguntas)=>{
         const respuestaNueva2 = document.querySelector("#respuestaNueva2").value;
         const respuestaNueva3 = document.querySelector("#respuestaNueva3").value;
         const respuestaNueva4 = document.querySelector("#respuestaNueva4").value;
-        console.log(preguntaNueva);
+
         const respuestaCorrecta = document.querySelector("#respuestaCorrecta").value;
 
-        let jsonData = {
-            "id" : json.length +1,
+        let newPregunta = {
+            "id" : listPreguntas.length +1,
             "tipo" : "Arte",
             "pregunta" : preguntaNueva,
             "respuesta1" : respuestaNueva1,
@@ -66,16 +66,23 @@ const agregarPregunta =(preguntas)=>{
             "respuestaCorrecta" : respuestaCorrecta
         }
 
-        fetch("../../jsonMock/preguntas.json")
-        .then(res => res.json())
-        .then(data =>{
-            data.push(jsonData);
-            console.log(data);
-        });
+        listPreguntas.push(newPregunta);
+        setListPreguntasLocal(listPreguntas);
+        Toastify({
+            text: "PREGUNTA NUEVA AÑADIDA",
+            duration: 3000,
+            className: "info",
+            gravity: "bottom",
+            position: "center",
+            style: {
+              background:
+                "linear-gradient(rgba(43, 247, 25, 0.7), rgba(44, 231, 7, 0.7))",
+            },
+          }).showToast();
         volverAJugar(preguntas);
     }
     botonEnviar.addEventListener("click", ()=> guardarYEnviar());
 };
 
 
-export {agregarPregunta};
+export { agregarPregunta };
